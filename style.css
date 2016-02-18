@@ -69,6 +69,7 @@
     
     .legacy-header-top-level li a.legacy-header-twolines {
         padding: 14px 0 16px 0;
+        *padding: 14px 0 17px 0;
     }
     
     .legacy-header-logo {
