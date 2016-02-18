@@ -25,7 +25,23 @@ function initHeader() {
             $flyout.hide()
             $topLevel.removeClass('active')
             $topLevel.parent().removeClass('active')
-        }
+        },
+        focus: function(){
+            var name = $(this).attr('data-flyout');
+            var $flyout = $('.legacy-header-flyout[data-flyout="' + name + '"]');
+            var $topLevel = $('.legacy-header-top-level-item[data-flyout="' + name + '"]');
+            $flyout.show()
+            $topLevel.addClass('active')
+            $topLevel.parent().addClass('active')
+        },
+        blur: function() {
+            var name = $(this).attr('data-flyout');
+            var $flyout = $('.legacy-header-flyout[data-flyout="' + name + '"]');
+            var $topLevel = $('.legacy-header-top-level-item[data-flyout="' + name + '"]');
+            $flyout.hide()
+            $topLevel.removeClass('active')
+            $topLevel.parent().removeClass('active')
+        },
     });
 
     //show flyout second level on first level hover
