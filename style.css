@@ -188,7 +188,7 @@
         *background:#efeadf;
     }
     .legacy-header-flyout-second-level-menu{
-        min-height:;
+        min-height: 300px;
     }
     .legacy-header-flyout-second-level-more {
         padding: 10px;
