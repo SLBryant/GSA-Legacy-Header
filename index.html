@@ -8,7 +8,8 @@
 </head>
 <style>body{
     min-height:1600px;
-    }</style>
+    }
+    </style>
 <body>
     <div id="container"></div>
     <div id="templates">
@@ -41,7 +42,7 @@
                         <div class="legacy-header-flyout-first-level legacy-header-one-third-column">
                             <ul>
                                 {{#children}}
-                                <li><a href="{{link}}" class="legacy-header-flyout-first-level-item" data-second-level="{{text}}">{{text}}</a></li>
+                                <li><a href="{{link}}" class="legacy-header-flyout-first-level-item {{^children.length}}legacy-header-no-children{{/children.length}}" data-second-level="{{text}}">{{text}}</a></li>
                                 {{/children}}
                             </ul>
                         </div>

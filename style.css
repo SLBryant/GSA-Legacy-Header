@@ -104,11 +104,19 @@
         display: none;
         margin: 0 auto;
         width: 960px;
-        height: 460px;
+        height: 500px;
         background: #efeadf;
         padding: 10px;
     }
-    
+    .legacy-header-flyout-first-level li a:after{
+        content:">";
+        position:absolute;
+        top:10px;
+        right:10px;
+    }
+    .legacy-header-flyout-first-level li a.legacy-header-no-children:after{
+        display:none;
+    }
     .legacy-header-flyout-first-level li,
     .legacy-header-flyout-second-level li {
         list-style: none;
@@ -116,6 +124,7 @@
         margin: 0;
         width: 100%;
         display: block;
+        position:relative;
     }
     
     .legacy-header-flyout-first-level-item,
@@ -172,4 +181,5 @@
         color: #fff;
         background: #004F87;
         font-size: 12px;
+        padding:5px;
     }
