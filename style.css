@@ -13,9 +13,10 @@
         width: 100%;
         height: 75px;
         font-family: 'Source Sans Pro';
-        width: 966px;
+        width: 960px;
         margin: 0 auto;
     }
+    
     
     .legacy-header-top-level ul {
         background: #fff;
@@ -32,6 +33,7 @@
         overflow: hidden;
     }
     
+
     .legacy-header-top-level li {
         list-style: none;
         display: block;
@@ -101,7 +103,7 @@
     .legacy-header-flyout {
         display: none;
         margin: 0 auto;
-        width: 966px;
+        width: 960px;
         height: 460px;
         background: #efeadf;
         padding: 10px;
