@@ -127,6 +127,7 @@
         width: 100%;
         display: block;
         position:relative;
+        *position:static;
     }
     
     .legacy-header-flyout-first-level-item,
