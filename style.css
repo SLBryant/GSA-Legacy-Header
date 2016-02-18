@@ -159,7 +159,7 @@
     
     .legacy-header-one-third-column {
         float: left;
-        width: 33%;
+        width: 300px;
     }
     
     .legacy-header-one-half-column {
@@ -169,8 +169,7 @@
     
     .legacy-header-two-thirds-column {
         float: left;
-        width: 66%;
-        *width:60%;
+        width: 600px;
     }
     .legacy-header-flyout-second-level-menu{
         min-height:400px;
