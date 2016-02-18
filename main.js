@@ -26,7 +26,7 @@ function initHeader() {
             $topLevel.removeClass('active')
             $topLevel.parent().removeClass('active')
         },
-        focus: function(){
+        focusin: function(){
             var name = $(this).attr('data-flyout');
             var $flyout = $('.legacy-header-flyout[data-flyout="' + name + '"]');
             var $topLevel = $('.legacy-header-top-level-item[data-flyout="' + name + '"]');
@@ -34,7 +34,7 @@ function initHeader() {
             $topLevel.addClass('active')
             $topLevel.parent().addClass('active')
         },
-        blur: function() {
+        focusout: function() {
             var name = $(this).attr('data-flyout');
             var $flyout = $('.legacy-header-flyout[data-flyout="' + name + '"]');
             var $topLevel = $('.legacy-header-top-level-item[data-flyout="' + name + '"]');
