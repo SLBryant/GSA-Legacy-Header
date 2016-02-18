@@ -173,7 +173,7 @@
         float: left;
         width: 600px;
         *width: 540px;
-        *background:red;
+        *background:#efeadf;
     }
     .legacy-header-flyout-second-level-menu{
         min-height:400px;
