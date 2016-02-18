@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+    <link href='//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css' rel='stylesheet' type='text/css'>
+    <link href='//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap.css' rel='stylesheet' type='text/css'>
+    <link href='style.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div id="container"></div>
+    <div id="templates">
+        <script type="template" class="legacy-header-template">
+            <div class="legacy-header">
+                <div class="legacy-header-top-level">
+                    <a href="http://www.gsa.gov/portal/category/100000"><img class="legacy-header-logo" src="http://gsa.gov/resources/images/nav-logo.jpg" /></a>
+                    <!--<ul>
+                        {{#navigation}}
+                        <li><a href="{{link}}" class="legacy-header-top-level-item" data-flyout="{{text}}">{{text}}</a></li>
+                        {{/navigation}}
+                    </ul>-->
+                    <ul>
+                        <li><a href="/travel" class="legacy-header-top-level-item" data-flyout="Travel">Travel</a></li>
+                        <li><a href="/portal/category/20987" class="legacy-header-top-level-item" data-flyout="Real Estate">Real Estate</a></li>
+                        <li><a href="/portal/category/100136" class="legacy-header-top-level-item" data-flyout="Acquisition">Acquisition</a></li>
+                        <li><a href="/technology" class="legacy-header-top-level-item" data-flyout="Technology">Technology</a></li>
+                        <li><a href="/policyregs" class="legacy-header-top-level-item legacy-header-twolines" data-flyout="Policy &amp; Regulations">Policy &amp; Regulations</a></li>
+                        <li><a href="/aboutgsa" class="legacy-header-top-level-item" data-flyout="About Us">About Us</a></li>
+                    </ul>
+                    <div class="legacy-header-search">
+                        <a href="http://search.gsa.gov/search?utf8=%3F&affiliate=gsa.gov">
+                            <img src="http://www.gsa.gov/resources/images/asto_1.1/search-icon-legacy.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="legacy-header-flyouts">
+                    {{#navigation}}
+                    <div class="legacy-header-flyout" data-flyout="{{text}}">
+                        <div class="legacy-header-flyout-first-level legacy-header-one-third-column">
+                            <ul>
+                                {{#children}}
+                                <li><a href="{{link}}" class="legacy-header-flyout-first-level-item" data-second-level="{{text}}">{{text}}</a></li>
+                                {{/children}}
+                            </ul>
+                        </div>
+                        {{#children}}
+                        <div class="legacy-header-flyout-second-level legacy-header-two-thirds-column" data-second-level="{{text}}">
+                            <div class="legacy-header-flyout-second-level-menu legacy-header-one-half-column">
+                                <ul>
+                                    {{#children}}
+                                    <li><a href="{{link}}" class="legacy-header-flyout-second-level-item">{{text}}</a></li>
+                                    {{/children}}
+                                </ul>
+                            </div>
+                            <div class="legacy-header-flyout-second-level-more legacy-header-one-half-column">
+                                <span class="legacy-header-featured-topics">Featured Topics</span>
+                                <!--{{featured}}-->
+                            </div>
+                        </div>
+                        {{/children}}
+                    </div>
+                    {{/navigation}}
+                </div>
+            </div>
+        </script>
+    </div>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+    <script src="navigation.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

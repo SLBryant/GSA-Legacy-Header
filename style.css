@@ -1,0 +1,173 @@
+.legacy-header-wrapper {
+        width: 100%;
+        height: 75px;
+        position: fixed;
+    }
+    
+    .legacy-header ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .legacy-header-top-level {
+        width: 100%;
+        height: 75px;
+        font-family: 'Source Sans Pro';
+        width: 966px;
+        margin: 0 auto;
+    }
+    
+    .legacy-header-top-level ul {
+        background: #fff;
+        display: block;
+        text-transform: uppercase;
+        float: left;
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid rgb(204, 204, 204);
+        border-bottom: 1px solid rgb(204, 204, 204);
+        border:0;
+        height: 75px;
+        *height: 73px;
+        overflow: hidden;
+    }
+    
+    .legacy-header-top-level li {
+        list-style: none;
+        display: block;
+        float: left;
+        width: 135px;
+        font-size: 15px;
+        text-align: center;
+        border-right: 1px solid rgb(204, 204, 204);
+        border-top: 1px solid rgb(204, 204, 204);
+        border-bottom: 1px solid rgb(204, 204, 204);
+        padding: 0;
+        margin: 0;
+    }
+    
+    .legacy-header-top-level li a {
+        padding: 23px 0 29px 0;
+        display: block;
+        color: #333;
+        text-decoration: none;
+        font-weight: 600;
+        height: 100%;
+    }
+    
+    .legacy-header-top-level li a:hover,
+    .legacy-header-top-level li a.active {
+        background: #efeadf;
+    }
+    .legacy-header-top-level li:hover,
+    .legacy-header-top-level li.active{
+        border-bottom:1px solid #efeadf;
+    }
+    
+    .legacy-header-top-level li a.legacy-header-twolines {
+        padding: 14px 0 16px 0;
+    }
+    
+    .legacy-header-logo {
+        height: 100%;
+        width: auto;
+        float: left;
+        padding: 0;
+        margin: 0;
+        outline: 0;
+        border: 0;
+    }
+    
+    .legacy-header-search {
+        background: #9bc6e9;
+        display: block;
+        float: left;
+        height: 75px;
+        width: 75px;
+    }
+    
+    .legacy-header-search a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .legacy-header-search img {
+        margin: 0 auto;
+        padding-top: 20px;
+        display: block;
+    }
+    
+    .legacy-header-flyout {
+        display: none;
+        margin: 0 auto;
+        width: 966px;
+        height: 460px;
+        background: #efeadf;
+        padding: 10px;
+    }
+    
+    .legacy-header-flyout-first-level li,
+    .legacy-header-flyout-second-level li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: block;
+    }
+    
+    .legacy-header-flyout-first-level-item,
+    .legacy-header-flyout-second-level-item {
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding: 10px;
+        color: #433F36;
+        font-size: 16px;
+    }
+    
+    .legacy-header-flyout-first-level-item:hover,
+    .legacy-header-flyout-first-level-item.active,
+    .legacy-header-flyout-second-level-item:hover,
+    .legacy-header-flyout-second-level-item.active {
+        background: #fff;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .legacy-header-flyout-first-level-item {
+        text-transform: uppercase;
+    }
+    
+    .legacy-header-flyout-second-level {
+        display: none;
+        background: #efeadf;
+    }
+    
+    .legacy-header-one-third-column {
+        float: left;
+        width: 33%;
+    }
+    
+    .legacy-header-one-half-column {
+        float: left;
+        width: 50%;
+    }
+    
+    .legacy-header-two-thirds-column {
+        float: left;
+        width: 66%;
+    }
+    .legacy-header-flyout-second-level-menu{
+        min-height:400px;
+    }
+    .legacy-header-flyout-second-level-more {
+        padding: 10px;
+    }
+    
+    .legacy-header-featured-topics {
+        text-transform: uppercase;
+        color: #fff;
+        background: #004F87;
+        font-size: 12px;
+    }
