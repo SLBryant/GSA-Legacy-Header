@@ -135,6 +135,7 @@
         height: 100%;
         display: block;
         padding: 10px 20px 10px 10px;
+        *padding: 10px;
         color: #433F36;
         font-size: 16px;
     }
