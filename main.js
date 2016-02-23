@@ -5,6 +5,7 @@ $(function() {
     });
     $('#container').html(rendered);
     initHeader()
+    initTabIndex()
 })
 
 function initHeader() {
@@ -26,7 +27,7 @@ function initHeader() {
             $topLevel.removeClass('active')
             $topLevel.parent().removeClass('active')
         },
-        focusin: function(){
+        focusin: function() {
             var name = $(this).attr('data-flyout');
             var $flyout = $('.legacy-header-flyout[data-flyout="' + name + '"]');
             var $topLevel = $('.legacy-header-top-level-item[data-flyout="' + name + '"]');
@@ -59,6 +60,40 @@ function initHeader() {
             var $firstLevel = $('.legacy-header-flyout-first-level-item[data-second-level="' + name + '"]');
             $secondLevel.hide()
             $firstLevel.removeClass('active')
+        },
+        focusin: function(){
+            var name = $(this).attr('data-second-level');
+            var $secondLevel = $('.legacy-header-flyout-second-level[data-second-level="' + name + '"]');
+            var $firstLevel = $('.legacy-header-flyout-first-level-item[data-second-level="' + name + '"]');
+            $secondLevel.show()
+            $firstLevel.addClass('active')
+        },
+        focusout: function(){
+            var name = $(this).attr('data-second-level');
+            var $secondLevel = $('.legacy-header-flyout-second-level[data-second-level="' + name + '"]');
+            var $firstLevel = $('.legacy-header-flyout-first-level-item[data-second-level="' + name + '"]');
+            $secondLevel.hide()
+            $firstLevel.removeClass('active')
         }
+    });
+}
+var tabIndexCounter = 0;
+function initTabIndex() {
+    function tabIndexNext() {
+        tabIndexCounter += 1;
+        return tabIndexCounter;
+    }
+    $('.legacy-header-top-level-item').each(function() {
+        $(this).attr('tabindex', tabIndexNext())
+        var name = $(this).attr('data-flyout');
+        var $flyout = $('.legacy-header-flyout[data-flyout="' + name + '"]');
+        $flyout.find('.legacy-header-flyout-first-level-item').each(function(){
+            $(this).attr('tabindex', tabIndexNext())
+            var name = $(this).attr('data-second-level');
+            var $secondLevel = $('.legacy-header-flyout-second-level[data-second-level="' + name + '"]');
+            $secondLevel.find('.legacy-header-flyout-second-level-item').each(function(){
+                $(this).attr('tabindex', tabIndexNext())
+            })
+        })
     });
 }

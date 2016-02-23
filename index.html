@@ -49,18 +49,18 @@ body {
                                 {{/children}}
                             </ul>
                         </div>
+                        <div class="legacy-header-flyout-first-level-more legacy-header-one-third-column">
+                                <span class="legacy-header-featured-topics">Featured Topics</span>
+                                <!--{{featured}}-->
+                            </div>
                         {{#children}}
-                        <div class="legacy-header-flyout-second-level legacy-header-two-thirds-column" data-second-level="{{text}}">
-                            <div class="legacy-header-flyout-second-level-menu legacy-header-one-half-column">
+                        <div class="legacy-header-flyout-second-level legacy-header-one-third-column" data-second-level="{{text}}">
+                            <div class="legacy-header-flyout-second-level-menu">
                                 <ul>
                                     {{#children}}
                                     <li><a href="{{link}}" class="legacy-header-flyout-second-level-item">{{text}}</a></li>
                                     {{/children}}
                                 </ul>
-                            </div>
-                            <div class="legacy-header-flyout-second-level-more legacy-header-one-half-column">
-                                <span class="legacy-header-featured-topics">Featured Topics</span>
-                                <!--{{featured}}-->
                             </div>
                         </div>
                         {{/children}}

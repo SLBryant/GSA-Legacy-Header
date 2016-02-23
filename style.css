@@ -193,6 +193,10 @@
     .legacy-header-flyout-second-level-more {
         padding: 10px;
     }
+    .legacy-header-flyout-first-level-more {
+        padding: 10px;
+        float:right;
+    }
     
     .legacy-header-featured-topics {
         text-transform: uppercase;
