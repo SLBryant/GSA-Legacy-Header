@@ -140,7 +140,7 @@ function uniqueNames() {
             var suffix = '_' + uniqueNumberNext();
             console.log(name + suffix)
             $(this).attr('data-second-level', name + suffix)
-            var $secondLevel = $('.legacy-header-flyout-second-level[data-second-level="' + name + '"]');
+            var $secondLevel = $flyout.find('.legacy-header-flyout-second-level[data-second-level="' + name + '"]');
             $secondLevel.attr('data-second-level', name + suffix)
         })
     });
