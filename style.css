@@ -101,9 +101,12 @@
         padding-top: 20px;
         display: block;
     }
+
     
     .legacy-header-flyout {
-        display: none;
+        /*display: none;*/
+        position: absolute;
+        left: -999em;
         margin: 0 auto;
         width: 960px;
         height: 400px;
@@ -116,13 +119,13 @@
         height:100%;
     }
     
-    .legacy-header-flyout-first-level li a:after{
+    .legacy-header-flyout-first-level-item:after{
         content:">";
         position:absolute;
         top:10px;
         right:10px;
     }
-    .legacy-header-flyout-first-level li a.legacy-header-no-children:after{
+    .legacy-header-flyout-first-level-item.legacy-header-no-children:after{
         display:none;
     }
     .legacy-header-flyout-first-level li,
@@ -155,7 +158,8 @@
     .legacy-header-flyout-first-level-item:hover,
     .legacy-header-flyout-first-level-item.active,
     .legacy-header-flyout-second-level-item:hover,
-    .legacy-header-flyout-second-level-item.active {
+    .legacy-header-flyout-second-level-item.active,
+    .legacy-header-flyout-second-level-item:focus {
         background: #fff;
         text-decoration: none;
         color: #000;
@@ -166,7 +170,9 @@
     }
     
     .legacy-header-flyout-second-level {
-        display: none;
+        /*display: none;*/
+        position: absolute;
+        left: -999em;
         background: #efeadf;
         min-height:300px;
     }
@@ -189,6 +195,7 @@
     }
     .legacy-header-flyout-second-level-menu{
         min-height: 300px;
+
     }
     .legacy-header-flyout-second-level-more {
         padding: 10px;
@@ -204,4 +211,9 @@
         background: #004F87;
         font-size: 12px;
         padding:5px;
+    }
+
+    .legacy-header-visible{
+        left:0;
+        position:static;
     }
