@@ -5,6 +5,7 @@ $(function() {
     });
     $('#container').html(rendered);
     initHeader()
+    uniqueNames()
     initTabIndex()
 })
 
@@ -101,8 +102,9 @@ function initHeader() {
         }
     });
 }
-var tabIndexCounter = 0;
 
+var tabIndexCounter = 1;
+//loop through menu item tree setting tabindex
 function initTabIndex() {
     function tabIndexNext() {
         tabIndexCounter += 1;
@@ -119,6 +121,27 @@ function initTabIndex() {
             $secondLevel.find('.legacy-header-flyout-second-level-item').each(function() {
                 $(this).attr('tabIndex', tabIndexNext())
             })
+        })
+    });
+}
+var uniqueNumberCounter = 1;
+//append unique numbers to make unique data attrs from non-unique menu item text
+function uniqueNames() {
+    function uniqueNumberNext() {
+        uniqueNumberCounter += 1;
+        return uniqueNumberCounter;
+    }
+    $('.legacy-header-top-level-item').each(function() {
+        //$(this).attr('tabIndex', tabIndexNext())
+        var name = $(this).attr('data-flyout');
+        var $flyout = $('.legacy-header-flyout[data-flyout="' + name + '"]');
+        $flyout.find('.legacy-header-flyout-first-level-item').each(function() {
+            var name = $(this).attr('data-second-level');
+            var suffix = '_' + uniqueNumberNext();
+            console.log(name + suffix)
+            $(this).attr('data-second-level', name + suffix)
+            var $secondLevel = $('.legacy-header-flyout-second-level[data-second-level="' + name + '"]');
+            $secondLevel.attr('data-second-level', name + suffix)
         })
     });
 }
