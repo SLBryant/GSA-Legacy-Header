@@ -111,15 +111,15 @@ function initTabIndex() {
         return tabIndexCounter;
     }
     $('.legacy-header-top-level-item').each(function() {
-        $(this).attr('tabIndex', tabIndexNext())
+        $(this).attr('tabindex', tabIndexNext())
         var name = $(this).attr('data-flyout');
         var $flyout = $('.legacy-header-flyout[data-flyout="' + name + '"]');
         $flyout.find('.legacy-header-flyout-first-level-item').each(function() {
-            $(this).attr('tabIndex', tabIndexNext())
+            $(this).attr('tabindex', tabIndexNext())
             var name = $(this).attr('data-second-level');
             var $secondLevel = $('.legacy-header-flyout-second-level[data-second-level="' + name + '"]');
             $secondLevel.find('.legacy-header-flyout-second-level-item').each(function() {
-                $(this).attr('tabIndex', tabIndexNext())
+                $(this).attr('tabindex', tabIndexNext())
             })
         })
     });
