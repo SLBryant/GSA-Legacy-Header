@@ -27,7 +27,6 @@
         margin: 0;
         padding: 0;
         border-top: 1px solid rgb(204, 204, 204);
-        border-bottom: 1px solid rgb(204, 204, 204);
         border:0;
         height: 75px;
         overflow: hidden;
@@ -114,8 +113,9 @@
         padding: 10px;
         overflow:hidden;
     }
-    .legacy-header-flyout-first-level{
-        border-right: 1px solid #70644A;
+    .legacy-header-flyout-first-level,
+    .legacy-header-flyout-second-level{
+        border-right: 1px solid #ccc;
         height:100%;
     }
     
